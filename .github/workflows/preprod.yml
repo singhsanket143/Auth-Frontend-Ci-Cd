@@ -31,7 +31,7 @@ jobs:
             - name: "List directory"
               run: |
                 ls
-                echo ${{ secrets.VITE_APP_KEY }}
+                echo ${{ env.VITE_APP_KEY }}
             
             - name: "Run ES Lint"
               run: npm run lint
