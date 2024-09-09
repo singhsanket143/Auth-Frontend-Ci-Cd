@@ -29,7 +29,9 @@ jobs:
               run: npm install -g vercel
 
             - name: "List directory"
-              run: ls
+              run: |
+                ls
+                echo ${{ secrets.VITE_APP_KEY }}
             
             - name: "Run ES Lint"
               run: npm run lint
