@@ -38,8 +38,8 @@ jobs:
 
             - name: "Create project Build"
               run: |
-                VITE_APP_KEY=${{ env.VITE_APP_KEY }}
-                VITE_JS_KEY=${{ env.VITE_JS_KEY }}
+                echo VITE_APP_KEY=$VITE_APP_KEY >> .env
+                echo VITE_JS_KEY=$VITE_JS_KEY >> .env
                 npm run build
               env:
                 VITE_APP_KEY: ${{ vars.VITE_APP_KEY }}
