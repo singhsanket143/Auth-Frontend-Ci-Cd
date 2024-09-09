@@ -37,7 +37,10 @@ jobs:
               run: npm run lint
 
             - name: "Create project Build"
-              run: npm run build
+              run: |
+                VITE_APP_KEY=${{ vars.VITE_APP_KEY }}
+                VITE_JS_KEY=${{ vars.VITE_JS_KEY }}
+                npm run build
               env:
                 VITE_APP_KEY: ${{ vars.VITE_APP_KEY }}
                 VITE_JS_KEY: ${{ vars.VITE_JS_KEY }}
