@@ -36,6 +36,9 @@ jobs:
 
             - name: "Create project Build"
               run: npm run build
+              env:
+                VITE_APP_KEY: ${{ env.VITE_APP_KEY }}
+                VITE_JS_KEY: ${{ env.VITE_JS_KEY }}
 
             - name: "Deploy to Vercel"
               run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --confirm --name=auth_preprod
