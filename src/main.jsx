@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 
 import Parse from 'parse/dist/parse.min.js';
-
+console.log(import.meta.env.VITE_APP_KEY), console.log(import.meta.env.VITE_JS_KEY);
 Parse.initialize(import.meta.env.VITE_APP_KEY, import.meta.env.VITE_JS_KEY);
 Parse.serverURL = "https://parseapi.back4app.com/";
 
